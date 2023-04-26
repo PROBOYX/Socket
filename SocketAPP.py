@@ -32,6 +32,6 @@ async def seek(sid, data):
     print(f"Seek received from {sid}")
     await sio.emit('seek', data, skip_sid=sid)
 
-if __name__ == '__main__':
-    import uvicorn
-    uvicorn.run(app_asgi, host='0.0.0.0', port=8000)
+# if __name__ == '__main__':
+#     import uvicorn
+#     uvicorn.run(app_asgi, host='0.0.0.0', port=8000)
