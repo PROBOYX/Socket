@@ -21,6 +21,11 @@ async def disconnect(sid):
 async def play(sid, data):
     print(f"Play received from {sid} - data {data}")
     await sio.emit('play', data, skip_sid=sid)
+    
+@sio.event
+async def playAll(sid, data):
+    print(f"Play received from {sid} - data {data}")
+    await sio.emit('playAll', data, skip_sid=sid)
 
 @sio.event
 async def pause(sid, data):
