@@ -26,6 +26,11 @@ async def play(sid, data):
 async def playAll(sid, data):
     print(f"PlayAll received from {sid} - data {data}")
     await sio.emit('playAll', data)
+  
+@sio.event
+async def stopAll(sid):
+    print(f"PlayAll received from {sid} - data {data}")
+    await sio.emit('stopAll', data)
 
 
 @sio.event
